@@ -1,0 +1,42 @@
+// Relative config
+$base-font-size: 16px !default;        // Base font-size
+$rem-baseline: 10px !default;          // Rem baseline
+$rem-with-px-fallbacks: true !default; // Set to false to disable pixel fallback
+
+// Relative main function
+@function relative($values, $context: $base-font-size, $unit: 1) {
+  $return: ();
+  @each $value in $values {
+    @if type-of($value) == "number" and unit($value) == "px" {
+      $return: append($return, $value / $context * $unit);
+    } @else if type-of($value) == "list" {
+      $return: append($return, relative($value, $context, $unit), comma);
+    } @else {
+      $return: append($return, $value);
+    }
+  }
+  @return $return;
+}
+
+// Relative rem shortcut function
+@function rem($values, $context: $rem-baseline) {
+  @return relative($values, $context, 1rem);
+}
+
+// Relative em shortcut function
+@function em($values, $context: $base-font-size) {
+  @return relative($values, $context, 1em);
+}
+
+// Relative percent shortcut function
+@function percent($values, $context: 100%) {
+  @return relative($values, $context, 100%);
+}
+
+// Relative rem mixin (with pixel fallback)
+@mixin rem($property, $values) {
+  @if $rem-with-px-fallbacks {
+    #{$property}: $values;
+  }
+  #{$property}: rem($values);
+}

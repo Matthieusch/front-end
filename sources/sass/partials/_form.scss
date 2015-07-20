@@ -1,0 +1,13 @@
+// ==========================================================================
+// Form
+// ==========================================================================
+
+// Reset fuckin' ios8 input style
+input[type=submit] {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+textarea {
+  resize: none;
+}
