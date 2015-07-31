@@ -1,0 +1,12 @@
+// This file import icons dependencies
+// Don't compile it with main.scss
+// It'll surcharge css upload and make the design slower to happend on page
+// We don't want that
+
+// SVG inline icons
+@import "partials/icons.svg";
+
+// Fallback PNG inline icons for ie8
+.lt-ie9 {
+  @import "partials/icons.png";
+}

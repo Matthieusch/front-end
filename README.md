@@ -1,2 +1,2 @@
-# front-end
+# Front-end
 Base of front-end files structure : gulp, sass, bootstrap, bourbon

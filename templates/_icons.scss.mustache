@@ -1,0 +1,11 @@
+.icon {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: cover;
+  {{#items}}
+  &.icon-{{slug}} {
+    background-image: url('{{{datauri}}}');
+  }
+
+  {{/items}}
+}

@@ -1,0 +1,17 @@
+.icon {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &.icon-green {
+    background-image: url('../../../sources/images/png/green.png');
+  }
+
+  &.icon-purple {
+    background-image: url('../../../sources/images/png/purple.png');
+  }
+
+  &.icon-yellow {
+    background-image: url('../../../sources/images/png/yellow.png');
+  }
+
+}

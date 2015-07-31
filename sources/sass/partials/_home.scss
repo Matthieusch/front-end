@@ -1,0 +1,27 @@
+.logo {
+  @include retina-image('../images/avoxa-logo-2', 182px 90px, jpg);
+  display: inline-block;
+  height: 90px;
+  width: 182px;
+}
+
+.icon {
+  height: 50px;
+  width: 50px;
+}
+
+.roboto,
+.roboto-bold,
+.roboto-italic {
+  font-family: 'robotocondensed';
+  font-weight: 400;
+  font-size: 65px;
+}
+
+.roboto-bold {
+  font-weight: 700;
+}
+
+.roboto-italic {
+  font-style: italic;
+}

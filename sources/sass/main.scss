@@ -1,12 +1,19 @@
+// Third-party
+@import "vendor/bootstrap.custom";
+@import "vendor/bourbon.custom";
+
 // Modules and Variables
 @import "partials/base";
 
 // Partials
 @import "partials/reset";
+@import "partials/fonts";
 @import "partials/typography";
 @import "partials/buttons";
 @import "partials/form";
+@import "partials/home";
 
-// Third-party
-@import "vendor/bootstrap.custom";
-@import "vendor/bourbon.custom";
+// Fallback
+.lt-ie9 {
+  @import "partials/icons.png";
+}
