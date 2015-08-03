@@ -1,5 +1,3 @@
-var SampleWidget;
-
 (function() {
   'use strict';
 
@@ -10,7 +8,7 @@ var SampleWidget;
   app.console('Sample widget!');
 
   var s;
-  SampleWidget = {
+  app.SampleWidget = {
 
     settings: {
       output: 'What did you do man? Let me sleep!',
@@ -19,12 +17,15 @@ var SampleWidget;
 
     init: function() {
       s = this.settings;
+
       this.bindUIActions();
     },
 
     bindUIActions: function() {
+      var self = this;
+
       s.elBody.bind('click', function() {
-        SampleWidget.returnUserEvent(s.output);
+        self.returnUserEvent(s.output);
       });
     },
 
@@ -33,5 +34,5 @@ var SampleWidget;
     }
   };
 
-  SampleWidget.init();
+  app.SampleWidget.init();
 })();

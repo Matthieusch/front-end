@@ -17,7 +17,7 @@ var app;
       timerStart: Date.now(),
 
       // Debug
-      debug: false,
+      debug: true,
       alertFallback: false,
       debugLoadMessages: [],
       debugEventMessages: [],
@@ -39,7 +39,7 @@ var app;
         else {
          console.log = function() {};
         }
-        console.log = function() {};
+        console.clear = function() {};
       }
 
       console.log('%cInformations\nversion: '+s.version + '\nauthor :' + s.author, 'color: #ae81bc');
